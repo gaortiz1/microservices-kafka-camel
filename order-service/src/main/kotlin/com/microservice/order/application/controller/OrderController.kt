@@ -1,7 +1,7 @@
 package com.microservice.order.application.controller
 
 import com.microservice.order.application.request.CreateOrderRequest
-import com.microservice.order.application.service.OrderService
+import com.microservice.order.producer.OrderServiceProducer
 import org.slf4j.LoggerFactory
 import org.springframework.http.MediaType
 import org.springframework.web.bind.annotation.PostMapping
@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController
 @RestController
 @RequestMapping("/order")
 class OrderController(
-    private val orderService: OrderService,
+    private val orderService: OrderServiceProducer,
 ) {
 
     @PostMapping(consumes = [MediaType.APPLICATION_JSON_VALUE])

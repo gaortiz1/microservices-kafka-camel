@@ -25,6 +25,11 @@ dependencies {
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("org.springframework.boot:spring-boot-starter-actuator")
 
+    implementation("org.springframework.kafka:spring-kafka")
+    implementation("org.apache.kafka:kafka-clients")
+    implementation("org.apache.camel.springboot:camel-spring-boot-starter")
+    implementation("org.apache.camel:camel-kafka:3.20.2")
+
     implementation("com.h2database:h2")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")

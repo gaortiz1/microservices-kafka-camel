@@ -1,5 +1,6 @@
 package com.microservice.order.model
 
+import com.microservice.OrderStatus
 import jakarta.persistence.Entity
 import jakarta.persistence.EnumType
 import jakarta.persistence.Enumerated
@@ -21,8 +22,4 @@ class Order(
     fun canceled() {
         status = OrderStatus.CANCELED
     }
-}
-
-enum class OrderStatus {
-    CANCELED, CREATED
 }
